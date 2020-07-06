@@ -22,9 +22,7 @@ dependencies {
   implementation(kotlin("stdlib-jdk8"))
   implementation(kotlin("reflect"))
 
-  implementation("org.springframework.boot:spring-boot-gradle-plugin:2.3.1.RELEASE")
   implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.72")
-  implementation("io.spring.dependency-management:io.spring.dependency-management.gradle.plugin:1.0.9.RELEASE")
 
   testImplementation("org.junit.jupiter:junit-jupiter:5.6.2")
   testImplementation("org.assertj:assertj-core:3.16.1")

@@ -6,12 +6,10 @@ import org.gradle.api.artifacts.ExternalModuleDependency
 import org.gradle.api.tasks.testing.Test
 import org.jetbrains.kotlin.gradle.plugin.KotlinPluginWrapper
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.springframework.boot.gradle.plugin.SpringBootPlugin
 
 class MyPlugin : Plugin<Project> {
 
     override fun apply(project: Project) {
-        project.plugins.apply(SpringBootPlugin::class.java)
         project.plugins.apply(KotlinPluginWrapper::class.java)
 
         applyRepositories(project)
