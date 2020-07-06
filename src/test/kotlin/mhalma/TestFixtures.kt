@@ -24,29 +24,20 @@ fun kotlinProjectDetails(projectDir: File) =
         buildScriptName = "build.gradle.kts",
         buildScript = """
           plugins {
-              kotlin("jvm") version "1.3.72"
-          }
-          repositories {
-            mavenLocal()
-            mavenCentral()
-          }
-          dependencies {
-            implementation(kotlin("stdlib-jdk8"))
-            testImplementation("org.junit.jupiter:junit-jupiter:5.6.2")
-            testImplementation("org.assertj:assertj-core:3.16.1")
+              id("mhalma.my-plugin") version "0.1.0"
           }
         """.trimIndent(),
         settingsFileName = "settings.gradle.kts",
         testClass = """
           package mhalma
           
-          import org.assertj.core.api.Assertions.assertThat
           import org.junit.jupiter.api.Test
+          import org.junit.jupiter.api.Assertions.assertEquals
           
           class ApplicationTest {
               @Test
               fun `A Test`() {
-                  assertThat("anything").isEqualTo("anything")
+                  assertEquals("anything", "anything")
               }
           }
         """.trimIndent()
