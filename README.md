@@ -1,4 +1,9 @@
+# Update #
+Turned out that we were excluding the wrong module. Changing`springBootTest.exclude(mapOf("group" to "junit", "module" to "junit"))` to `springBootTest.exclude(mapOf("group" to "junit", "module" to "org.junit.vintage"))` fixed the problem.
+
+
 # gradle-runner-junit5-kotlin
+
 
 Since we tried to update our Gradle plugin to use Gradle 6.4 some tests that assert JUnit 5 is working have started failing.
 
